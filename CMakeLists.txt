@@ -4,7 +4,8 @@ cmake_minimum_required (VERSION 3.5)
 
 add_definitions(-std=c++11)
 
-set(CXX_FLAGS "-Wall")
+# add some optimization flags
+set(CXX_FLAGS "-Wall -g -O3 -funroll-loops -fopenmp")
 set(CMAKE_CXX_FLAGS "${CXX_FLAGS}")
 
 set(sources src/particle_filter.cpp src/main.cpp)
